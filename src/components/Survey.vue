@@ -4,8 +4,6 @@ import { Model } from 'survey-core';
 
 // const SURVEY_ID = 1;
 
-
-
 const surveyJson = {
   // Create multiple pages 
   "pages": [
