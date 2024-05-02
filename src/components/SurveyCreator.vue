@@ -16,6 +16,8 @@
             </div>
         </div>
     </div>
+    <!-- Button to save settings -->
+    <button @click="saveSurvey">Save Survey</button>
 </template>
 
 
@@ -68,11 +70,17 @@ export default {
             }
         }
 
+        const saveSurvey = () => {
+            alert(JSON.stringify(items.value));
+        };
+
+
         return {
             getList,
             onDrop,
             startDrag,
             dragOver,
+            saveSurvey,
         }
     },
 }
@@ -101,5 +109,19 @@ export default {
     padding: 5px;
     cursor: pointer;
     /* Indicates it's draggable */
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 </style>
