@@ -3,14 +3,14 @@ import { ref } from 'vue';
 import Survey from './components/Survey.vue'
 import SurveyCreator from './components/SurveyCreator.vue'
 
-const isSurveyActive = ref(false);
+const isSurveyActive = ref(true);
 
 </script>
 
 <template>
   <div>
     <button @click="isSurveyActive = !isSurveyActive">
-      {{ isSurveyActive ? 'Switch to Survey' : 'Switch to Survey Creator' }}
+      {{ isSurveyActive ? 'Switch to Survey Creator' : 'Switch to Survey' }}
     </button>
     <SurveyCreator v-if="!isSurveyActive" />
     <Survey v-else />

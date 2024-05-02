@@ -4,6 +4,7 @@ import { Model } from 'survey-core';
 
 // const SURVEY_ID = 1;
 
+// TODO: Import JSON detailing the survey from db service (GET request)
 const surveyJson = {
   // Create multiple pages 
   "pages": [
@@ -91,7 +92,7 @@ const alertResults = (sender: any) => {
 
 const survey = new Model(surveyJson);
 survey.onComplete.add(alertResults);
-
+// TODO: Send post request with survey data to db server
 // function saveSurveyResults(url: string | URL, json: object) {
 //   fetch(url, {
 //     method: 'POST',

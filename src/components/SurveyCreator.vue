@@ -74,7 +74,6 @@ export default {
             alert(JSON.stringify(items.value));
         };
 
-
         return {
             getList,
             onDrop,
@@ -87,7 +86,7 @@ export default {
 </script>
 
 
-
+<!-- TODO: Import common style CSS -->
 <style>
 .container {
     display: flex;
