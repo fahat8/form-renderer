@@ -47,7 +47,7 @@ export default {
         }
 
         const dragOver = (evt, index) => {
-            dropIndex.value = index;
+            dropIndex.value = index; // TODO: Fix - value is always undefined, not the value of the element on which it is hovered. Currently, the element is dragged on top of the list
             evt.preventDefault();
             console.log(dropIndex.value);
         }
@@ -62,7 +62,7 @@ export default {
                     const newItem = { ...droppedItem, id: nextId.value++, list: 2 };
                     items.value.push(newItem);
                 } else if (origin === 2) { // Reorder elements in right list
-                    items.value.splice(items.value.findIndex(i => i.id === itemID), 1); // Remove the item from its current position
+                    items.value.splice(items.value.findIndex(i => i.id === itemID), 1);
                     items.value.splice(dropIndex.value, 0, droppedItem);
                 }
             }
